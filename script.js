@@ -412,9 +412,9 @@ canvas.addEventListener('contextmenu', (e) => {
 });
 
 startBtn.addEventListener('click', () => {
+    // Allow empty username; use default when not provided
     if (usernameInput.value.trim() === '') {
-        alert('Please enter a username');
-        return;
+        usernameInput.value = 'Player';
     }
     initGame();
     gameRunning = true;
